@@ -1,5 +1,6 @@
 package com.example.budgetplanner2;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void onScrollChange(View view, int i, int i1, int i2, int i3)
         {
-
+            int pos = amountList.getSelectedItemPosition();
+            reasonList.setSelection(pos);
         }
     };
 
@@ -83,8 +85,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.OutgoingsButton:
                 AddOutgoings();
                 break;
+            /*
             case R.id.DeleteButton:
                 DeleteItem();
+            */
+
         }
     }
 
@@ -113,15 +118,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayAdapterAmounts.add(strAmount);
         arrayAdapterReasons.add(reason);
 
+        Update();
+
     }
 
-    public void DeleteItem()
+    /*public void DeleteItem()
     {
         int selectedItem = amountList.getSelectedItemPosition();
         amountList.removeViewAt(selectedItem);
         reasonList.removeViewAt(selectedItem);
         Update();
-    }
+    }*/
 
     public String GetTotal()
     {
