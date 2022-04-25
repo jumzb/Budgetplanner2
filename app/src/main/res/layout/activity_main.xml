@@ -8,72 +8,94 @@
 
     <ListView
         android:id="@+id/ReasonList"
-        android:layout_width="203dp"
-        android:layout_height="336dp"
-        android:layout_marginBottom="292dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/ReasonBox"
-        android:layout_width="179dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textShortMessage"
+        android:layout_width="180dp"
+        android:layout_height="425dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:choiceMode="singleChoice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/AmountList"
+        app:layout_constraintTop_toBottomOf="@+id/ReasonBox" />
 
     <ListView
         android:id="@+id/AmountList"
-        android:layout_width="185dp"
-        android:layout_height="336dp"
-        android:layout_marginBottom="292dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="180dp"
+        android:layout_height="425dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/ReasonList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AmountBox" />
+
+    <EditText
+        android:id="@+id/ReasonBox"
+        android:layout_width="146dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textShortMessage"
+        android:hint="reason"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AmountBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <EditText
         android:id="@+id/AmountBox"
-        android:layout_width="156dp"
-        android:layout_height="41dp"
+        android:layout_width="146dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="6dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:hint="amount"
+        app:layout_constraintEnd_toStartOf="@+id/ReasonBox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/IncomeButton"
-        android:layout_width="124dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="216dp"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="52dp"
         android:text="Income"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/OutgoingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
-        android:text="Outgoings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/IncomeButton" />
-
-    <Button
         android:id="@+id/DeleteButton"
-        android:layout_width="97dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="216dp"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="52dp"
         android:text="Delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toEndOf="@+id/OutgoingsButton" />
+
+    <Button
+        android:id="@+id/OutgoingsButton"
+        android:layout_width="124dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="52dp"
+        android:text="Outgoings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/IncomeButton" />
 
     <TextView
         android:id="@+id/TotalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="108dp"
         android:fontFamily="sans-serif-medium"
         android:text="Total:"
         android:textSize="20sp"
